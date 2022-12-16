@@ -1,0 +1,110 @@
+.root {
+  --max-width: 1400px;
+
+  box-sizing: border-box;
+  width: 100%;
+  font-family: Raleway, Arial, sans-serif;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 1280px) {
+  .root {
+    --max-width: 1200px;
+    --h1-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .root {
+    --max-width: 960px;
+    --h1-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .root {
+    --max-width: 840px;
+    --h1-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .root {
+    --max-width: 480px;
+    --h1-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .root {
+    --max-width: 360px;
+    --h1-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .root {
+    --max-width: 240px;
+    --h1-size: 1.5rem;
+  }
+}
+
+*::selection {
+  color: #fff;
+  background-color: rgb(233 150 122);
+  line-height: 1;
+}
+
+.banner-img {
+  box-sizing: border-box;
+  display: block;
+  margin: 0;
+  width: 100%;
+  height: 5rem;
+  background: transparent var(--bg-image) fixed no-repeat center / 100vw;
+}
+
+h1 {
+  width: 100%;
+  font-size: var(--h1-size);
+  font-weight: 800;
+  line-height: 3rem;
+  cursor: default;
+}
+
+h1 ~ p {
+  width: 100%;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+h2 {
+  width: 100%;
+  font-size: 1.1rem;
+  line-height: 2rem;
+  font-weight: 600;
+  color: rgb(100 149 237);
+  cursor: default;
+}
+
+h2 ~ * {
+  width: 100%;
+  font-size: 0.75rem;
+  line-height: 1.5em;
+}
+
+p {
+  width: 100%;
+  white-space: normal;
+  word-wrap: keep-all;
+}
+
+main section:nth-of-type(even) {
+  color: #fff;
+  background: linear-gradient(33deg, #323b42, #121317);
+}
+
+main section:nth-of-type(odd) {
+  color: #000;
+  background: linear-gradient(33deg, #faf8f9, #f0eff0);
+}

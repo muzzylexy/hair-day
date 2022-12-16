@@ -1,0 +1,136 @@
+footer {
+  box-sizing: border-box;
+  border-top: 1px solid rgb(160 160 160);
+  position: relative;
+  width: 100%;
+  color: #fff;
+  background-color: rgb(1 38 66);
+}
+
+footer .container {
+  box-sizing: border-box;
+  display: grid;
+  place-items: center center;
+  margin: 0;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 4fr 1fr;
+  grid-template-areas: "social-media logo address" ". copyright .";
+  padding: 0;
+  gap: 0;
+  width: 100%;
+}
+
+@media screen and (max-width: 480px) {
+  footer .container {
+    display: block;
+  }
+}
+
+footer .social-media {
+  grid-area: social-media;
+  display: grid;
+  margin: 1em;
+  box-sizing: border-box;
+  width: 4em;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0.5em;
+  grid-template-areas: "google instgram twitter" "facebook fb-share fb-share";
+  place-items: center center;
+}
+
+footer .social-media .btn {
+  display: block;
+  padding: 0;
+  width: 1.8rem;
+  font-size: 0.6rem;
+  text-align: center;
+  color: #fff;
+  border-radius: 50%;
+  aspect-ratio: 1 /1;
+  line-height: 1.8rem;
+  box-shadow: 3px 3px 1px rgba(226 226 226 / 80%);
+  transition: all 0.1s;
+  cursor: pointer;
+}
+
+footer .social-media .btn:hover {
+  box-shadow: 1px 1px 3px rgba(226 226 226 / 80%);
+  transform: scale(0.9);
+}
+
+footer .social-media .google {
+  grid-area: google;
+  background-color: #dd4b39;
+}
+
+footer .social-media .instgram {
+  grid-area: instgram;
+  background-color: #ac2bac;
+}
+
+footer .social-media .twitter {
+  background-color: #55acee;
+  grid-area: twitter;
+}
+
+footer .social-media .facebook {
+  background-color: #3b5998;
+  grid-area: facebook;
+}
+
+footer .social-media .fb-share {
+  width: 3.6rem;
+  font-family: Lora, serif;
+  color: #fff;
+  background-color: #3b5998;
+  border: transparent;
+  text-transform: capitalize;
+  aspect-ratio: 2/1;
+  grid-area: fb-share;
+  border-radius: 2px;
+}
+
+
+footer .social-media .fb-share > span:first-child {
+  color: #3b5998;
+  background-color: #fff;
+}
+
+footer .social-media .fb-share > span::before {
+  content: " ";
+  white-space: pre;
+}
+
+footer address {
+  grid-area: address;
+  box-sizing: border-box;
+  margin: 1rem;
+  font-size: 0.5em;
+  text-align: right;
+}
+
+footer address a {
+  color: #fff;
+}
+
+footer .logo {
+  display: block;
+  margin: 0 auto;
+  max-width: 200px;
+  grid-area: logo;
+  box-sizing: border-box;
+}
+
+footer img {
+  width: 100%;
+  height: 100%;
+}
+
+footer p {
+  grid-area: copyright;
+  width: 100%;
+  font-size: 0.2em;
+  text-align: center;
+  box-sizing: border-box;
+}

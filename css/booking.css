@@ -1,0 +1,78 @@
+.booking .container {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: var(--max-width);
+  box-sizing: border-box;
+}
+
+.booking .container > * {
+  padding: 1rem 2rem;
+}
+
+.booking form div {
+  padding: 0.5rem 0;
+}
+
+.booking form {
+  font-size: 0.8em;
+  font-weight: 600;
+}
+
+.booking form em {
+  font-size: 0.9em;
+  font-style: italic;
+  color: rgb(255 174 174);
+}
+
+.booking input,
+.booking textarea {
+  background-color: #ddd;
+  border: 2px solid#9e9ba4;
+  box-shadow: 5px 5px 1px #0002;
+}
+
+.booking textarea {
+  width: 80%;
+  max-width: 480px;
+}
+
+.booking input[type="date"] {
+  cursor: pointer;
+}
+
+.booking input[type="checkbox"] {
+  width: 1em;
+  height: 1em;
+  box-shadow: 0 5px 10px #0002;
+  vertical-align: middle;
+}
+
+input:focus:invalid {
+  background-color: #fdd;
+  border: rgb(255 159 159) 3px solid;
+}
+
+.booking span {
+  color: rgb(255 174 174);
+}
+
+.booking .btn {
+  padding: 0.5em 0.8em;
+  font-size: 1em;
+  font-family: Arial, Helvetica, sans-serif, monospace;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(33deg, #f8c390, #d279ee);
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px #0002;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.booking .btn:hover {
+  transform: scale(0.9);
+  box-shadow: 0 3px 5px #0002;
+}

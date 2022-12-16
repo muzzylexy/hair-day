@@ -1,0 +1,175 @@
+
+header {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 340px;
+  text-align: left;
+  color: #fff;
+}
+
+header h1 {
+  text-transform: uppercase;
+}
+
+header p {
+  font-weight: 300;
+  background-color: rgb(71 71 71 / 50%);
+}
+
+
+header .container {
+  position: absolute;
+  top: 30%;
+  display: block;
+  box-sizing: border-box;
+  padding: 0 10% 1em;
+  width: 100%;
+  max-width: var(--max-width);
+  height: 100%;
+}
+
+@media screen and (max-width: 480px) {
+  header .container {
+    top: 20%;
+  }
+}
+
+
+header h1::after {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  margin-top: -8px;
+  width: 100%;
+  height: 5px;
+  content: "";
+  background: rgb(100 149 237);
+  transform: translate3d(-200%, 0, 0);
+  transition: all 0.4s;
+}
+
+header h1:hover::after {
+  width: 0%;
+  transform: translate3d(0, 0, 0);
+}
+
+header h1::before {
+  content: "HAIR DAY";
+  position: absolute;
+  overflow: hidden;
+  width: 0%;
+  white-space: nowrap;
+  color: rgb(100 149 237);
+  z-index: 2;
+  transition: width 1s 0.3s;
+}
+
+header h1:hover::before {
+  width: 100%;
+}
+
+header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 20%;
+  filter: grayscale();
+}
+
+nav {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+
+@keyframes slide-in-from-left {
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 0%;
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    left: 0%;
+  }
+
+  100% {
+    left: -100%;
+  }
+}
+
+.slide-in {
+  animation: 0.5s ease-out 0s 1 normal forwards running slide-in-from-left;
+}
+
+.slide-out {
+  animation: 0.5s ease-out 0s 1 normal forwards running slide-out;
+}
+
+
+nav .bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: 30px;
+  background-color: rgb(71 71 71);
+  opacity: 0.5;
+  z-index: 2;
+  transition: opacity 0.5s ease-in-out;
+}
+
+nav .bar:hover {
+  opacity: 1;
+}
+
+
+.bar .button {
+  position: absolute;
+  aspect-ratio: 1 / 1;
+  top: 10%;
+  left: 2%;
+  height: 80%;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.bar .button:hover {
+  transform: scale(1.2);
+}
+
+nav .list {
+  position: fixed;
+  top: 0;
+  box-sizing: border-box;
+  padding: 3em 2em;
+  width: 15em;
+  height: 100vh;
+  font-weight: bold;
+  text-decoration: underline;
+  background-color: #fff;
+  border-radius: 0 2% 2%;
+  z-index: 1;
+  box-shadow: 2px 2px 5vw rgb(0 0 0 / 58.9%);
+  line-height: 2em;
+}
+
+nav li {
+  cursor: pointer;
+  transition: 0.7s;
+}
+
+nav li a {
+  color: rgb(50 50 50);
+}
+
+nav li:hover {
+  transform: scale(1.1);
+}
+
